@@ -4,33 +4,31 @@ require 'eac_ruby_utils/core_ext'
 
 module EacRailsGemSupport
   module Rspec
-    class Setup
+    module Setup
+      extend ::ActiveSupport::Concern
       require_sub __FILE__, include_modules: true
-      common_constructor :setup_obj
 
-      def perform
-        setup_rails_env
-        return unless setup_rails_app
+      def self.extended(obj)
+        obj.setup_rails_env
+        return unless obj.setup_rails_app
 
-        setup_fixtures
-        setup_capybara
-        setup_factory_bot
+        obj.setup_fixtures
+        obj.setup_capybara
+        obj.setup_factory_bot
       end
-
-      private
 
       # @return [Pathname]
       def rails_app_path
         [
-          setup_obj.app_root_path,
-          setup_obj.app_root_path.join('spec', 'support', 'rails_app')
+          app_root_path,
+          app_root_path.join('spec', 'support', 'rails_app')
         ].find { |app_path| app_path.join('config', 'environment.rb').file? }
       end
 
       def fixtures_path
         [
-          setup_obj.app_root_path.join('spec', 'fixtures'),
-          setup_obj.app_root_path.join('test', 'fixtures')
+          app_root_path.join('spec', 'fixtures'),
+          app_root_path.join('test', 'fixtures')
         ].find(&:directory?)
       end
 
@@ -47,9 +45,9 @@ module EacRailsGemSupport
       end
 
       def setup_fixtures
-        setup_obj.rspec_config.use_transactional_fixtures = true
+        rspec_config.use_transactional_fixtures = true
         fixtures_path.if_present do |v|
-          setup_obj.rspec_config.fixture_path = v
+          rspec_config.fixture_path = v
         end
       end
 
