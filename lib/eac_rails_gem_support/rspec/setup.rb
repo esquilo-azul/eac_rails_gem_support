@@ -25,13 +25,6 @@ module EacRailsGemSupport
         ].find { |app_path| app_path.join('config', 'environment.rb').file? }
       end
 
-      def fixtures_path
-        [
-          app_root_path.join('spec', 'fixtures'),
-          app_root_path.join('test', 'fixtures')
-        ].find(&:directory?)
-      end
-
       def setup_rails_app
         return false unless rails_app_path
 
@@ -42,13 +35,6 @@ module EacRailsGemSupport
         require 'rspec/rails'
         ::ActiveRecord::Migration.maintain_test_schema!
         true
-      end
-
-      def setup_fixtures
-        rspec_config.use_transactional_fixtures = true
-        fixtures_path.if_present do |v|
-          rspec_config.fixture_path = v
-        end
       end
 
       def setup_rails_env
