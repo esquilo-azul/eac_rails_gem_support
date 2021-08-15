@@ -9,6 +9,7 @@ module EacRailsGemSupport
       require_sub __FILE__, include_modules: true
 
       def self.extended(obj)
+        obj.singleton_class.include(::EacRubyUtils::SimpleCache)
         obj.setup_rails_env
         return unless obj.setup_rails_app
 
