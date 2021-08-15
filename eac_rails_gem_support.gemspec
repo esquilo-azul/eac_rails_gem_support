@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Put here the authors']
   s.summary     = 'Put here de description.'
 
-  s.files = Dir['{lib}/**/*']
+  s.files = Dir['{lib,template}/**/*']
 
   s.add_dependency 'capybara'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.3', '>= 0.3.3'
