@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'eac_ruby_gem_support', '~> 0.3', '>= 0.3.3'
   s.add_dependency 'eac_ruby_utils', '~> 0.74'
   s.add_dependency 'factory_bot_rails'
+  s.add_dependency 'rails', '~> 5.1.7'
   s.add_dependency 'rspec-rails'
   s.add_dependency 'sqlite3'
 end
