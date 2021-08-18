@@ -11,7 +11,13 @@ module EacRailsGemSupport
           dir = app_root_path.join('spec', 'support', 'rails_app_append')
           return nil unless dir.directory?
 
-          ::EacRailsGemSupport::Rspec::AppendableRailsApp.new(app_root_path, dir).target_dir
+          ::EacRailsGemSupport::Rspec::AppendableRailsApp.new(
+            app_root_path, dir, builded_rails_app_path_target_dir
+          ).target_dir
+        end
+
+        def builded_rails_app_path_target_dir
+          root_tmp.join('rails_app')
         end
 
         def existing_rails_app_path
