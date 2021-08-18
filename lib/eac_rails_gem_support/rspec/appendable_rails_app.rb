@@ -26,7 +26,7 @@ module EacRailsGemSupport
       end
 
       def database_migrate
-        the_gem.bundle('exec', 'rake', 'db:migrate').chdir(target_dir).execute!
+        the_gem.bundle('exec', 'rake', 'db:migrate').chdir_root.execute!
       end
 
       def clear_target
@@ -42,7 +42,7 @@ module EacRailsGemSupport
       end
 
       def the_gem_uncached
-        ::EacRubyGemsUtils::Gem.new(gem_dir)
+        ::EacRubyGemsUtils::Gem.new(target_dir)
       end
     end
   end
