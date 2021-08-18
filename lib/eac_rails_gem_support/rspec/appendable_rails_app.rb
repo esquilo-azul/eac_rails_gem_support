@@ -10,13 +10,16 @@ module EacRailsGemSupport
     class AppendableRailsApp
       enable_simple_cache
       common_constructor :gem_dir, :append_dir, :target_dir, default: [nil] do
-        self.target_dir = (target_dir || ::Dir.mktmpdir).to_pathname
+        self.target_dir = ::EacRubyUtils::Fs::ClearableDirectory.new(
+          (target_dir || ::Dir.mktmpdir).to_pathname
+        )
         build
       end
 
       protected
 
       def build
+        clear_target
         copy_app_base
         copy_append_directory
         database_migrate
@@ -24,6 +27,10 @@ module EacRailsGemSupport
 
       def database_migrate
         the_gem.bundle('exec', 'rake', 'db:migrate').chdir(target_dir).execute!
+      end
+
+      def clear_target
+        target_dir.clear
       end
 
       def copy_app_base
