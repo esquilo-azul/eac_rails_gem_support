@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'capybara'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.5.1'
   s.add_dependency 'eac_ruby_utils', '~> 0.95', '>= 0.95.1'
-  s.add_dependency 'eac_templates', '~> 0.1', '>= 0.1.1'
+  s.add_dependency 'eac_templates', '~> 0.3', '>= 0.3.1'
   s.add_dependency 'factory_bot_rails'
   s.add_dependency 'rails', '~> 5.2.6'
   s.add_dependency 'rspec-rails'
