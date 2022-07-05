@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'eac_rails_gem_support/patches/object/template'
-require 'eac_ruby_gems_utils/gem'
+require 'avm/eac_ruby_base1/sources/base'
 require 'eac_ruby_utils/core_ext'
 require 'fileutils'
 
@@ -42,7 +42,7 @@ module EacRailsGemSupport
       end
 
       def the_gem_uncached
-        ::EacRubyGemsUtils::Gem.new(target_dir)
+        ::Avm::EacRubyBase1::Sources::Base.new(target_dir)
       end
     end
   end
