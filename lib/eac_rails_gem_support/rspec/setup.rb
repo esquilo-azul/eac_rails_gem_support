@@ -13,9 +13,9 @@ module EacRailsGemSupport
         obj.setup_rails_env
         return unless obj.setup_rails_app
 
-        obj.setup_fixtures
-        obj.setup_capybara
-        obj.setup_factory_bot
+        %w[fixtures capybara factory_bot].each do |item|
+          obj.send("setup_#{item}")
+        end
       end
     end
   end
