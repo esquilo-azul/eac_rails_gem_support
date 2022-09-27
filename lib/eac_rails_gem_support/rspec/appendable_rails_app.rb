@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require 'eac_rails_gem_support/patches/object/template'
 require 'avm/eac_ruby_base1/sources/base'
 require 'eac_ruby_utils/core_ext'
+require 'eac_templates/core_ext'
 require 'fileutils'
 
 module EacRailsGemSupport
