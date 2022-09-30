@@ -26,6 +26,10 @@ module EacRailsGemSupport
         expect(actual_value).not_to eq(expected_value), message
       end
 
+      def assert_raise(*expected_types)
+        expect { yield }.to raise_error(*expected_types)
+      end
+
       private
 
       def assert_difference_call(code)
