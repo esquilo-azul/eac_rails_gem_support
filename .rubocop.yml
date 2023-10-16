@@ -5,9 +5,6 @@ Rails/ApplicationRecord:
   Enabled: false
 RSpec/Rails/InferredSpecType:
   Enabled: false
-RSpec/SortMetadata:
-  Exclude:
-  - spec/features/home_page_spec.rb
 Style/ExpandPathArguments:
   Exclude:
   - template/eac_rails_gem_support/rspec/appendable_rails_app/config.ru
