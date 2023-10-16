@@ -1,21 +1,34 @@
-require:
-  - rubocop-rails
-  - rubocop-rspec
-
-Layout/LineLength:
-  Max: 100
-
-Style/AsciiComments:
+inherit_gem:
+  eac_ruby_gem_support: .rubocop.yml
+Gemspec/RequiredRubyVersion:
+  Exclude:
+  - eac_rails_gem_support.gemspec
+Lint/EmptyBlock:
+  Exclude:
+  - template/eac_rails_gem_support/rspec/appendable_rails_app/config/routes.rb
+Rails/ApplicationRecord:
   Enabled: false
-
-Style/Documentation:
+RSpec/MetadataStyle:
+  Exclude:
+  - spec/features/home_page_spec.rb
+RSpec/Rails/InferredSpecType:
   Enabled: false
-
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
+RSpec/SortMetadata:
+  Exclude:
+  - spec/features/home_page_spec.rb
+Style/ExpandPathArguments:
+  Exclude:
+  - template/eac_rails_gem_support/rspec/appendable_rails_app/config.ru
+Style/ExplicitBlockArgument:
+  Exclude:
+  - lib/eac_rails_gem_support/rspec/minitest_support.rb
+Style/RedundantConstantBase:
+  Exclude:
+  - Gemfile
+  - spec/rubocop_spec.rb
+  - spec/spec_helper.rb
+  - spec/support/rails_app_append/app/controllers/application_controller.rb
+  - spec/support/rails_app_append/app/controllers/home_controller.rb
+  - template/eac_rails_gem_support/rspec/appendable_rails_app/config/application.rb
+  - template/eac_rails_gem_support/rspec/appendable_rails_app/config/routes.rb
+  - template/eac_rails_gem_support/rspec/appendable_rails_app/config.ru
