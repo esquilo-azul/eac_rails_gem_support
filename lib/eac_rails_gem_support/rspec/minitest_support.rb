@@ -26,8 +26,8 @@ module EacRailsGemSupport
         expect(actual_value).not_to eq(expected_value), message
       end
 
-      def assert_raise(*expected_types)
-        expect { yield }.to raise_error(*expected_types)
+      def assert_raise(*expected_types, &block)
+        expect(&block).to raise_error(*expected_types)
       end
 
       private

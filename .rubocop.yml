@@ -5,9 +5,6 @@ Rails/ApplicationRecord:
   Enabled: false
 RSpec/Rails/InferredSpecType:
   Enabled: false
-Style/ExplicitBlockArgument:
-  Exclude:
-  - lib/eac_rails_gem_support/rspec/minitest_support.rb
 Style/RedundantConstantBase:
   Exclude:
   - Gemfile
