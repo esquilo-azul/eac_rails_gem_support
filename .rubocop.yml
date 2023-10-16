@@ -5,13 +5,3 @@ Rails/ApplicationRecord:
   Enabled: false
 RSpec/Rails/InferredSpecType:
   Enabled: false
-Style/RedundantConstantBase:
-  Exclude:
-  - Gemfile
-  - spec/rubocop_spec.rb
-  - spec/spec_helper.rb
-  - spec/support/rails_app_append/app/controllers/application_controller.rb
-  - spec/support/rails_app_append/app/controllers/home_controller.rb
-  - template/eac_rails_gem_support/rspec/appendable_rails_app/config/application.rb
-  - template/eac_rails_gem_support/rspec/appendable_rails_app/config/routes.rb
-  - template/eac_rails_gem_support/rspec/appendable_rails_app/config.ru

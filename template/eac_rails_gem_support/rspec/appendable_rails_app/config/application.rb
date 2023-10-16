@@ -6,8 +6,8 @@ require 'rails/all'
 
 Bundler.require(*Rails.groups)
 
-file = ::File.join(__dir__, 'application_before.rb')
-require file if ::File.exist?(file)
+file = File.join(__dir__, 'application_before.rb')
+require file if File.exist?(file)
 
 module Dummy
   class Application < Rails::Application
@@ -18,5 +18,5 @@ module Dummy
   end
 end
 
-file = ::File.join(__dir__, 'application_after.rb')
-require file if ::File.exist?(file)
+file = File.join(__dir__, 'application_after.rb')
+require file if File.exist?(file)
