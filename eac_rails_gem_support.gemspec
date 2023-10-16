@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib,template}/**/*', '.rubocop.yml']
 
+  s.required_ruby_version = '>= 2.7.0'
+
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.31', '>= 0.31.2'
   s.add_dependency 'capybara', '~> 3.39', '>= 3.39.2'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.8.1'

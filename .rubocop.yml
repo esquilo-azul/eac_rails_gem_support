@@ -1,8 +1,6 @@
+---
 inherit_gem:
-  eac_ruby_gem_support: .rubocop.yml
-Gemspec/RequiredRubyVersion:
-  Exclude:
-  - eac_rails_gem_support.gemspec
+  eac_ruby_gem_support: ".rubocop.yml"
 Lint/EmptyBlock:
   Exclude:
   - template/eac_rails_gem_support/rspec/appendable_rails_app/config/routes.rb
