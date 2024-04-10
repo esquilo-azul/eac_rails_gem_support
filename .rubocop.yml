@@ -5,5 +5,5 @@ Rails/ApplicationRecord:
   Enabled: false
 Rails/FindEach:
   Enabled: true
-RSpec/Rails/InferredSpecType:
+RSpecRails/InferredSpecType:
   Enabled: false
