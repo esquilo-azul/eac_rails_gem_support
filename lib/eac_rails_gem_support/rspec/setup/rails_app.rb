@@ -32,7 +32,7 @@ module EacRailsGemSupport
           existing_rails_app_path || builded_rails_app_path
         end
 
-        def setup_rails_app
+        def setup_rails_app # rubocop:disable Naming/PredicateMethod
           return false unless rails_app_path
 
           require rails_app_path.join('config', 'environment').to_path
