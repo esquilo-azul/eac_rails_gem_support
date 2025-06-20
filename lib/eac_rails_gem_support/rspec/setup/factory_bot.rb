@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_ruby_utils/core_ext'
-require 'eac_rails_gem_support/factory_bot/instance_registry'
-
 module EacRailsGemSupport
   module Rspec
     module Setup

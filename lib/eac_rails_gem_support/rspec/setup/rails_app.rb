@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_rails_gem_support/rspec/appendable_rails_app'
-require 'eac_ruby_utils'
-
 module EacRailsGemSupport
   module Rspec
     module Setup

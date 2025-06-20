@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'eac_rails_gem_support/rspec/minitest_support'
-require 'eac_ruby_utils/core_ext'
-
 module EacRailsGemSupport
   module Rspec
     module Setup
