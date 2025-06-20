@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.36'
   s.add_dependency 'capybara', '~> 3.39', '>= 3.39.2'
+  s.add_dependency 'concurrent-ruby', '1.3.4' # https://stackoverflow.com/a/79361034
   s.add_dependency 'eac_ruby_gem_support', '~> 0.12'
   s.add_dependency 'eac_ruby_utils', '~> 0.128'
   s.add_dependency 'eac_templates', '~> 0.8', '>= 0.8.1'
