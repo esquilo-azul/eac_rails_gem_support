@@ -42,7 +42,7 @@ module EacRailsGemSupport
         end
 
         def setup_rails_env
-          ENV['RAILS_ENV'] ||= 'test'
+          ::Rails.env = ENV['RAILS_ENV'] ||= 'test'
         end
       end
     end
