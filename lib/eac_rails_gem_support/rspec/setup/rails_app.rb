@@ -37,6 +37,7 @@ module EacRailsGemSupport
           raise('The Rails environment is running in production mode!') if Rails.env.production?
 
           require 'rspec/rails'
+          require 'active_record/base'
           ::ActiveRecord::Migration.maintain_test_schema!
           true
         end
