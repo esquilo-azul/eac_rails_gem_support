@@ -4,6 +4,7 @@ module EacRailsGemSupport
   module Rspec
     module Setup
       extend ::ActiveSupport::Concern
+
       require_sub __FILE__, include_modules: true
 
       def self.extended(obj)
