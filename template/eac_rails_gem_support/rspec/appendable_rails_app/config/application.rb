@@ -11,6 +11,8 @@ require file if File.exist?(file)
 
 module Dummy
   class Application < Rails::Application
+    config.load_defaults 6.1
+
     config.active_record.raise_in_transactional_callbacks = true if ::Rails.version < '5'
     config.active_record.sqlite3.represent_boolean_as_integer = true if ::Rails.version < '6'
 
