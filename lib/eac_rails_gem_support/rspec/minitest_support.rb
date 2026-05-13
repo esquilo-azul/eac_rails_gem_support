@@ -10,8 +10,8 @@ module EacRailsGemSupport
         expect(after_value).send(compare_method, eq(before_value), message)
       end
 
-      def assert_no_difference(code, message = nil, &block)
-        assert_difference(code, message, :to, &block)
+      def assert_no_difference(code, message = nil, &)
+        assert_difference(code, message, :to, &)
       end
 
       def assert_equal(expected_value, actual_value, message = nil)
@@ -26,8 +26,8 @@ module EacRailsGemSupport
         expect(actual_value).not_to eq(expected_value), message
       end
 
-      def assert_raise(*expected_types, &block)
-        expect(&block).to raise_error(*expected_types)
+      def assert_raise(*expected_types, &)
+        expect(&).to raise_error(*expected_types)
       end
 
       private
