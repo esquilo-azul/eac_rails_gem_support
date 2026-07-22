@@ -14,11 +14,11 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2'
 
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.41', '>= 0.41.1'
+  s.add_dependency 'avm-eac_ruby_base1', '~> 0.42', '>= 0.42.1'
   s.add_dependency 'capybara', '~> 3.40'
-  s.add_dependency 'concurrent-ruby', '1.3.4' # https://stackoverflow.com/a/79361034
+  s.add_dependency 'concurrent-ruby', '1.3.4'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.13'
-  s.add_dependency 'eac_ruby_utils', '~> 0.131', '>= 0.131.1'
+  s.add_dependency 'eac_ruby_utils', '~> 0.131', '>= 0.131.2'
   s.add_dependency 'eac_templates', '~> 0.8', '>= 0.8.3'
   s.add_dependency 'factory_bot_rails', '~> 6.5', '>= 6.5.1'
   s.add_dependency 'launchy', '~> 2.5', '>= 2.5.2'
