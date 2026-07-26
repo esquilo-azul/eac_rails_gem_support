@@ -31,7 +31,7 @@ module EacRailsGemSupport
       end
 
       def copy_app_base
-        template.apply(self, target_dir)
+        eac_template.apply(self, target_dir)
       end
 
       def copy_append_directory
