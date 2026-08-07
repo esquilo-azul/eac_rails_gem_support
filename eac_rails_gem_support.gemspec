@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{lib,template}/**/*', '.rubocop.yml']
 
-  s.required_ruby_version = '>= 3.2'
+  s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
   s.add_dependency 'avm-eac_ruby_base1', '~> 0.44'
   s.add_dependency 'capybara', '~> 3.40'
