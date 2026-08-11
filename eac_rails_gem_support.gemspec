@@ -24,5 +24,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'letter_opener', '~> 1.10'
   s.add_dependency 'rails', '>= 6.1.7.10'
   s.add_dependency 'rspec-rails', '~> 8.0', '>= 8.0.4'
-  s.add_dependency 'sqlite3', '~> 1.7', '>= 1.7.3'
+  s.add_dependency 'sqlite3', '~> 2.9', '>= 2.9.5'
 end
