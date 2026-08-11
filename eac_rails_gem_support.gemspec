@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2' # rubocop:disable Gemspec/RequiredRubyVersion
 
-  s.add_dependency 'avm-eac_ruby_base1', '~> 0.44'
+  s.add_dependency 'avm-eac_ruby_base1', '~> 0.45'
   s.add_dependency 'capybara', '~> 3.40'
   s.add_dependency 'eac_ruby_base1', '~> 0.1', '>= 0.1.1'
   s.add_dependency 'eac_ruby_gem_support', '~> 0.15'
